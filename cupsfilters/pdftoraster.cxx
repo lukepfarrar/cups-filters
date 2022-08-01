@@ -1243,8 +1243,8 @@ static void write_page_image(cups_raster_t *raster, pdftoraster_doc_t *doc,
 
   poppler::page *current_page =doc->poppler_doc->create_page(pageNo-1);
   poppler::page_renderer pr;
-  pr.set_render_hint(poppler::page_renderer::antialiasing, true);
-  pr.set_render_hint(poppler::page_renderer::text_antialiasing, true);
+  pr.set_render_hint(poppler::page_renderer::antialiasing, false);
+  pr.set_render_hint(poppler::page_renderer::text_antialiasing, false);
 
   unsigned char *colordata,*newdata,*graydata,*onebitdata;
   unsigned int pixel_count;
